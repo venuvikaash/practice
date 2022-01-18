@@ -3,26 +3,40 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 .App{
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url('../src/assets/audi___r8_cup-wallpaper-1366x768.jpg');
-  height: 100vh;
-  box-sizing: border-box;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url('../src/assets/hamza-nouasria-SzJo-8Q5iD4-unsplash.jpg');
+  background-size:cover;
+  height: 460px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.navbar{
+.navbar-main{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  text-decoration: none;
-  list-style: none;
-  width: auto;
-  height: 2vh;
-  cursor: pointer;
+  justify-content: space-between;
 }
 
-.navbar li{
+.navbar-main-a{
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.navbar-right{
+  display: flex;
+  flex-direction: row;
+  /* margin-left: -3rem; */
+  width: 35%;
+  margin-top: 0px;
+  justify-content: space-evenly;
+}
+
+.navbar-right li{
   margin-right: 1rem;
   list-style-type: none;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 a{
@@ -34,11 +48,10 @@ a{
 }
 
 .home, .about, .contact{
-  height: 90vh;
+  height: 100vh;
   width: auto;
   display: flex;
   justify-content: center;
-  background-size: cover;
 }
 
 .heading{
@@ -47,4 +60,52 @@ a{
   align-items: center;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
+}
+
+.heading-search{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-svg{
+  width: 100%;
+  height: 10vh;
+}
+
+.heading-side{
+  display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  background-color: white;
+  /* background-image: url('searchicon.png'); */
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+  .App{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+  }
 }
