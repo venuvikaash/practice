@@ -1,25 +1,25 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
+// import Home from './Pages/Home';
+// import About from './Pages/About';
+// import Contact from './Pages/Contact';
 import Heading from './components/Heading'
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
+import Menu from "./components/Menu";
+import Collections from "./components/Collections";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<div className="App">
-				<Navbar />
-				<Heading />
+			<div className="container">
+				<div className="App">
+						<Navbar />
+						<Heading />
+					</div>
+				<div className="flex-column">
+					<Menu />
+					<Collections />
+				</div>
 			</div>
-		
-			<Switch>
-				<Route path="/" component={Home} exact/>
-				<Route path="/about" component={About} />
-				<Route path="/contact" component={Contact} />
-			</Switch>
-		</BrowserRouter>
   );
 }
 

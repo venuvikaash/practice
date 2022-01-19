@@ -1,17 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  height: 300vh;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+p{
+  color:rgb(54, 54, 54);
+  font-weight: 300;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  justify-content: center;
+  margin-right: 100px;
 }
 .App{
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url('../src/assets/hamza-nouasria-SzJo-8Q5iD4-unsplash.jpg');
   background-size:cover;
   height: 460px;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 }
 
+.navbar-icon{
+  width: 2rem;
+  height: 2rem;
+}
 .navbar-main{
   display: flex;
   flex-direction: row;
@@ -19,8 +45,16 @@ body{
 }
 
 .navbar-main-a{
-  margin-top: 2rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.navbar-left{
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
   margin-left: 5rem;
+  align-items: center;
 }
 
 .navbar-right{
@@ -65,6 +99,7 @@ a{
 .heading-search{
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .logo-svg{
@@ -96,7 +131,161 @@ input[type=text] {
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
+  color: rgb(155, 154, 154);
 }
+
+input[type=text]:active ,:focus{
+  outline: 0;
+}
+
+.menu-component{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 40vh;
+  margin-top: 5vh;
+}
+
+.menu-table{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 200px;
+  border: 0.5px solid #ccc;
+  border-radius: 10px ;
+  margin-right: 2vh;
+  transition: 0.2s ease-in;
+}
+
+.menu-table:hover{
+  transition: 0.2s ease-out;
+  transform: scale(1.05);
+  box-shadow: 0px;
+}
+
+.menu-photo img{
+  width: 100%;    
+  border-radius: 10px 10px 0px 0px;
+  height: 25vh;
+}
+
+.menu-heading{
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: auto;
+}
+
+.collection-container{
+  height: 100vh;
+  width: 100%;
+}
+
+.collection-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-content-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.collection-content-p{
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.collection-forward{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.collection-forward p{
+  color: red;
+}
+
+.collection-forward-img{
+  height: 1rem;
+  width: 1rem;
+}
+
+.collection-content-bottom{
+  width: 100%;
+  height: 375px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 20px 20px 0px;
+}
+
+.collection-card{
+  width: 285px;
+  margin-left: 5px;
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.collection-card-img-one{
+  height: 100%;
+  top: 0;
+  right: 150px;
+  position: relative;
+  background: linear-gradient(
+0deg
+, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+}
+
+.collection-card-img-pizza{
+  width: 100%;
+  background: linear-gradient(
+0deg
+, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+}
+
+.collection-card-img-chennai{
+  height: 100%;
+  position: relative;
+  right: 92.5px;
+  background: linear-gradient(
+0deg
+, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+}
+
+.collection-card-content{
+  position: absolute;
+    color: black;
+    background: black;
+    top: 14rem;
+    height: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
   .navbar{
