@@ -3,6 +3,7 @@ import NextIcon from '../assets/next.svg'
 import Briyani from '../assets/briyani.jpg'
 import Chennai from '../assets/chennai.jpg'
 import Pizza from '../assets/pizza.jpg'
+import Ice from '../assets/ice.jpg'
 
 const Collections = () => {
   return (
@@ -31,7 +32,7 @@ const Collections = () => {
                   <img src={Chennai} alt='' className='collection-card-img-chennai' />
                 </div>
                 <div className='collection-card'>
-                  <img src={Pizza} alt='' className='collection-card-img-pizza' />
+                  <img src={Ice} alt='' className='collection-card-img-ice' />
                 </div>
                 <div className='collection-card'>
                   <img src={Briyani} alt='' className='collection-card-img-one' />

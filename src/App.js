@@ -7,6 +7,7 @@ import Heading from './components/Heading'
 // import { BrowserRouter } from "react-router-dom";
 import Menu from "./components/Menu";
 import Collections from "./components/Collections";
+import Contact from "./components/Contact";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<div className="flex-column">
 					<Menu />
 					<Collections />
+					<Contact />
 				</div>
 			</div>
   );
