@@ -12,10 +12,10 @@ body{
   left: 0;
 }
 
-p{
+/* p{
   color:rgb(54, 54, 54);
   font-weight: 300;
-}
+} */
 
 .flex-column{
   display: flex;
@@ -242,25 +242,17 @@ input[type=text]:active ,:focus{
   top: 0;
   right: 150px;
   position: relative;
-  background: linear-gradient(
-0deg
-, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
 }
 
 .collection-card-img-pizza{
   width: 100%;
-  background: linear-gradient(
-0deg
-, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+  position: relative;
 }
 
 .collection-card-img-chennai{
   height: 100%;
   position: relative;
   right: 92.5px;
-  background: linear-gradient(
-0deg
-, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
 }
 
 .collection-card-content{
@@ -273,9 +265,6 @@ input[type=text]:active ,:focus{
 
 .collection-card-img-ice{
   height: 100%;
-  background: linear-gradient( 
-0deg
-, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
   right: 4rem;
   position: relative;
 }
@@ -300,17 +289,33 @@ input[type=text]:active ,:focus{
   flex-direction: row;
 }
 
-input[type=radio]{
-  width: 2rem;
-  height: 2rem;
-  color: red;
+input[type='radio'] {
+  -webkit-appearance:none;
+  width:2rem;
+  height:2rem;
+  border:1px solid rgb(121, 121, 121);
+  border-radius:50%;
+  outline:none;
+  box-shadow:0 0 5px 0px rgb(121, 121, 121) inset;
 }
-input[type=radio]:checked{
-  width: 2rem;
-  height: 2rem;
-  background: red;
-  color: red;
-  border: 2px solid red;
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;    
+}
+input[type='radio']:checked:before {
+  background:rgb(248, 137, 137);
+}
+.radio-display{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 3rem;
+  width: 6rem;
+  justify-content: space-between;
 }
 
 /* input[type='radio']:checked:after {
@@ -336,3 +341,79 @@ input[type=radio]:checked{
     height: auto;
   }
 }
+
+.background-linear{
+  width: 285px;
+  position: relative;
+  height: 375px;
+  background: linear-gradient( 
+0deg
+, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+  bottom: 375px;
+}
+.background-linear-pizza{
+  width: 285px;
+  position: relative;
+  height: 375px;
+  background: linear-gradient( 
+0deg
+, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+  bottom: 509px;
+}
+.background-linear-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 95%;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: white;
+}
+
+.background-linear-content h3, .background-linear-content p{
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.overflow{
+  overflow: hidden;
+  width: 285px;
+  height: 375px;
+}
+
+.email-content{
+  padding: 10px 100px 10px 30px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  height: 1.5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.email-container{
+  margin-top: 1rem;
+  padding: 10px 10px 10px 0px;
+  /* background-color: red; */
+}
+
+.email-button{
+  color: white;
+  background-color: rgb(255, 60, 60);
+  height: 3rem;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-left: 1rem;
+  transition: 0.2s ease;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.email-button:hover{
+  background-color: red;
+  transition: 0.2s ease;
+  border: none;
+}
+

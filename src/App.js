@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 // import About from './Pages/About';
 // import Contact from './Pages/Contact';
 import Heading from './components/Heading'
-// import { BrowserRouter } from "react-router-dom";
 import Menu from "./components/Menu";
 import Collections from "./components/Collections";
 import Contact from "./components/Contact";

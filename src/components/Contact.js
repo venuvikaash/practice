@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Email from './Email';
+import Phone from './Phone';
 
 const Contact = () => {
+  const [input,setInput] = useState("email");
   return (
   <div className='mobile-mock'>
       <div className='mobile-mock-img'>
@@ -10,9 +13,16 @@ const Contact = () => {
         <h1>Get the Zomato App</h1>
         <p>We will send you a link, open it on your phone to download the app</p>
         <div className='mobile-mock-radio'>
-            <input type="radio" name='E-mail' />
-            <input type="radio" name='E-mail' />
+            <label className='radio-display'>
+              <input type="radio" name='E-mail' onClick={() => setInput("email")} />
+              <p>E-mail</p>
+            </label>
+            <label className='radio-display' >
+              <input type="radio" name='Phone' onClick={() => setInput("phone")} />
+              <p>Phone</p>
+            </label>
         </div>
+        {input === "email" ? <Email /> : <Phone />}
       </div>
   </div>
   )
