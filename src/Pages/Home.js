@@ -1,15 +1,14 @@
-import React from 'react'
-import Heading from './components/Heading'
-import Menu from "./components/Menu";
-import Collections from "./components/Collections";
-import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
+import Heading from '../components/Heading'
+import Menu from "../components/Menu";
+import Collections from "../components/Collections";
+import Contact from "../components/Contact";
+import Footer from "../components/footer";
 
-
-const Home = () => {
-    return (
-        <div className="container">
-				<div className="App">
+function Home() {
+	return (
+		<>
+		<div className="App">
 						<Navbar />
 						<Heading />
 					</div>
@@ -17,9 +16,9 @@ const Home = () => {
 					<Menu />
 					<Collections />
 					<Contact />
-				</div>
-			</div>
-    )
+					<Footer />
+				</div></>
+  );
 }
 
-export default Home
+export default Home;
