@@ -3,13 +3,17 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-.container{
+.container-zomato{
   height: 300vh;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.container::-webkit-scrollbar{
+  display: none;
 }
 
 /* p{
@@ -338,30 +342,6 @@ input[type='radio']:checked:before {
   justify-content: space-between;
 }
 
-/* input[type='radio']:checked:after {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 2rem;
-  position: relative;
-  background-color: #ffa500;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
-} */
-
-@media only screen and (max-width: 600px) {
-  .navbar{
-    display: flex;
-    flex-direction: column;
-  }
-  .App{
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: auto;
-  }
-}
-
 .background-linear{
   width: 285px;
   position: relative;
@@ -457,3 +437,101 @@ input[type='radio']:checked:before {
   background-color: red;
 }
 
+.footer{
+  height: 70vh;
+  margin-top: 3rem;
+}
+
+.footer-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-column{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  h3{
+    text-transform: uppercase;
+  }
+}
+
+.footer-content{
+  ul{
+    list-style: none;
+    padding: 0;
+    li{
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      a{
+        text-decoration: none;
+        color: #ccc;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-zomato{
+    width: 425px;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+  .App{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+  }
+  .heading-search{
+    width: 100%;
+    font-size: 1rem;
+  }
+  .flex-column{
+    margin: 0;
+  }
+  .menu-component{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .collection-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+  }
+  .collection-content-bottom{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+ .collection-content-top{
+      display: flex;
+      flex-direction: column;
+  }
+  .collection-card{
+    margin-bottom: 2rem;
+  }
+  // .background-linear-content{
+  // }
+.collection-forward {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  align-items: center;
+  justify-content: flex-start;
+  }
+  .mobile-mock{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-mock-img{
+    display: none;
+  }
+}

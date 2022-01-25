@@ -3,7 +3,7 @@ import Home from "./Pages/Home";
 
 function App() {
 	return (
-			<div className="container">
+			<div className="container-zomato">
 				<Home />
 			</div>
   );
