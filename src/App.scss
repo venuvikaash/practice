@@ -534,4 +534,11 @@ input[type='radio']:checked:before {
   .mobile-mock-img{
     display: none;
   }
+  .heading-side{
+    font-size: 1rem;
+  }
+  .navbar-right{
+    display: flex;
+    flex-direction: column;
+  }
 }
