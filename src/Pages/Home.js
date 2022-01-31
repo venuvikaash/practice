@@ -1,12 +1,24 @@
-import React from 'react'
+import Navbar from "../components/Navbar";
+import Heading from '../components/Heading'
+import Menu from "../components/Menu";
+import Collections from "../components/Collections";
+import Contact from "../components/Contact";
+import Footer from "../components/footer";
 
-
-const Home = () => {
-    return (
-        <div className='home'>
-            <h1 className='heading'>Home</h1>
-        </div>
-    )
+function Home() {
+	return (
+		<>
+		<div className="App">
+						<Navbar />
+						<Heading />
+					</div>
+				<div className="flex-column">
+					<Menu />
+					<Collections />
+					<Contact />
+					<Footer />
+				</div></>
+  );
 }
 
-export default Home
+export default Home;
